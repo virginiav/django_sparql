@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Teste Interface</title>
+</head>
+<body>
+
+<br><br><br><br>
+<div align="center">
+    <form class="form-inline" action="{% url 'index' %}" method="post" >
+        {% csrf_token %}
+        <p>Digite o nome da serie que esta buscando</p><br>
+        <input type="text" style="text-align:center" placeholder="Digite o nome da serie" size="50" id="buscanome" name="palavrachave"/>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-success">Buscar</button>
+
+    </form>
+
+</div>
+
+        <br>
+        <br>
+<div>
+          <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lm6h{font-style:italic;font-family:Arial, Helvetica, sans-serif !important;;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-0ibc{font-family:Arial, Helvetica, sans-serif !important;;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-51dm{font-weight:bold;font-style:italic;font-family:Arial, Helvetica, sans-serif !important;;border-color:#c0c0c0;text-align:left;vertical-align:top}
+</style>
+<table class="tg" align="center">
+  <tr>
+    <th class="tg-0ibc"><span style="font-weight:bold">Título:</span></th>
+    <th class="tg-lm6h" colspan="2"> {{consult}} </th>
+    <th class="tg-0ibc"><span style="font-weight:bold">Lançamento:</span><br></th>
+    <th class="tg-51dm" colspan="2"><span style="font-style:italic">{{lanc}}</span><br></th>
+  </tr>
+  <tr>
+    <td class="tg-0ibc"><span style="font-weight:bold">País:</span></td>
+    <td class="tg-lm6h">{{pais}}</td>
+    <td class="tg-0ibc"><span style="font-weight:bold">Nº Episódios</span></td>
+    <td class="tg-0ibc"><span style="font-style:italic">{{eps}}</span></td>
+    <td class="tg-0ibc"><span style="font-weight:bold">Nº Temporadas</span></td>
+    <td class="tg-lm6h">{{temporadas}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0ibc" colspan="6"><span style="font-weight:bold">Resumo:</span></td>
+  </tr>
+  <tr>
+    <td class="tg-lm6h" colspan="6">{{abs}}</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+
+</body>
+</html>
